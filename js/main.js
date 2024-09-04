@@ -9,6 +9,7 @@ const cuerpoTabla = tablaListaCompras.getElementsByTagName("tbody").item(0);
 const contadorProductos = document.getElementById("contadorProductos");
 const precioTotal = document.getElementById("precioTotal");
 const productosTotal = document.getElementById("productosTotal");
+const fecha = document.getElementById("fecha");
 
 let datos = [];
 let isValid = true;
@@ -165,5 +166,6 @@ window.addEventListener("load", function(event){
                      </tr>`
             cuerpoTabla.insertAdjacentHTML("beforeend", row)
     })
-
+    let now = new Date();
+    fecha.innerText = now.getFullYear();
 });
